@@ -25,7 +25,7 @@ class SourceyGodoc < Formula
   end
 
   def install
-    bin.install Dir["sourcey-godoc*/sourcey-godoc"].first => "sourcey-godoc"
+    bin.install "sourcey-godoc"
   end
 
   test do
