@@ -1,5 +1,3 @@
-require "language/node"
-
 class Sourcey < Formula
   desc "Open source documentation engine for OpenAPI, Doxygen, godoc, MCP, and Markdown"
   homepage "https://sourcey.com"
@@ -10,7 +8,10 @@ class Sourcey < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "pack", "--silent"
+    tarball = Dir["sourcey-#{version}.tgz"].first
+    odie "npm pack did not produce a tarball" if tarball.nil?
+    system "npm", "install", "-g", "--prefix=#{libexec}", "--no-audit", "--no-fund", tarball
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
