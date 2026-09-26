@@ -1,8 +1,8 @@
 class Sourcey < Formula
   desc "Open source documentation engine for OpenAPI, Doxygen, godoc, MCP, and Markdown"
   homepage "https://sourcey.com"
-  url "https://registry.npmjs.org/sourcey/-/sourcey-3.6.9.tgz"
-  sha256 "bef4a3ccf425fbf981ccda0199032b157dcc20e43ed3f64481349c4b99c7982b"
+  url "https://registry.npmjs.org/sourcey/-/sourcey-3.6.10.tgz"
+  sha256 "f6a91124a06a25efb9be989dc022a61a6bed4e9c22a132f4b08b7392b3dee486"
   license "AGPL-3.0-only"
 
   depends_on "node"
